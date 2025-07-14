@@ -1,0 +1,123 @@
+[2025-07-14 11:09:20,067: INFO: main: logging done]
+[2025-07-14 15:33:19,962: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 15:33:19,964: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 15:33:19,965: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 15:33:19,966: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "D:\endToend\NLP\src\text_summarier\utils\common.py", line 30, in read_yaml
+    return ConfigBox(content)
+  File "box\\box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\endToend\NLP\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\endToend\NLP\src\text_summarier\pipeline\dataIngestion.py", line 10, in initiate_data_ingestion
+    config=ConfigruationManager()
+  File "D:\endToend\NLP\src\text_summarier\config\configuration.py", line 8, in __init__
+    self.params=read_yaml(params_file_path)
+  File "D:\endToend\newEnv\lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "D:\endToend\NLP\src\text_summarier\utils\common.py", line 32, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2025-07-14 15:33:43,306: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 15:33:43,307: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 15:33:43,311: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 15:33:43,311: INFO: common: created directory at: artifacts]
+[2025-07-14 15:33:43,312: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-14 15:33:43,312: ERROR: main: expected string or bytes-like object]
+Traceback (most recent call last):
+  File "D:\endToend\NLP\main.py", line 10, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "D:\endToend\NLP\src\text_summarier\pipeline\dataIngestion.py", line 14, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "D:\endToend\NLP\src\text_summarier\components\dataIngestion.py", line 15, in download_file
+    filename,headers=request.urlretrieve(
+  File "D:\endToend\newEnv\lib\urllib\request.py", line 239, in urlretrieve
+    url_type, path = _splittype(url)
+  File "D:\endToend\newEnv\lib\urllib\parse.py", line 1080, in _splittype
+    match = _typeprog.match(url)
+TypeError: expected string or bytes-like object
+[2025-07-14 15:35:34,605: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 15:35:34,606: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 15:35:34,607: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 15:35:34,608: INFO: common: created directory at: artifacts]
+[2025-07-14 15:35:34,608: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-14 15:35:36,423: INFO: dataIngestion: File is downloading]
+[2025-07-14 15:35:36,545: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-07-14 17:32:40,989: INFO: config: TensorFlow version 2.10.1 available.]
+[2025-07-14 17:33:04,863: INFO: config: TensorFlow version 2.10.1 available.]
+[2025-07-14 17:33:05,170: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 17:33:05,171: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:33:05,173: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:33:05,173: INFO: common: created directory at: artifacts]
+[2025-07-14 17:33:05,174: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-14 17:33:07,683: INFO: dataIngestion: File is downloading]
+[2025-07-14 17:33:07,788: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-07-14 17:33:07,788: INFO: main: stage Data Validation Stage initiated]
+[2025-07-14 17:33:07,790: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:33:07,790: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:33:07,791: INFO: common: created directory at: artifacts]
+[2025-07-14 17:33:07,791: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-14 17:33:07,791: ERROR: main: DataTransformationConfig.__init__() got an unexpected keyword argument 'tokenizer_name']
+Traceback (most recent call last):
+  File "D:\endToend\NLP\main.py", line 23, in <module>
+    data_validation_pipeline.initiate_data_transformation()
+  File "D:\endToend\NLP\src\text_summarier\pipeline\dataTransformation.py", line 12, in initiate_data_transformation
+    data_transformation_config=config.get_data_transformation_config()
+  File "D:\endToend\NLP\src\text_summarier\config\configuration.py", line 30, in get_data_transformation_config
+    data_transformation_config=DataTransformationConfig(
+TypeError: DataTransformationConfig.__init__() got an unexpected keyword argument 'tokenizer_name'
+[2025-07-14 17:35:32,784: INFO: config: TensorFlow version 2.10.1 available.]
+[2025-07-14 17:35:33,550: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 17:35:33,553: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:35:33,556: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:35:33,556: INFO: common: created directory at: artifacts]
+[2025-07-14 17:35:33,557: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-14 17:35:33,557: INFO: dataIngestion: File already exits]
+[2025-07-14 17:35:33,677: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-07-14 17:35:33,677: INFO: main: stage Data Validation Stage initiated]
+[2025-07-14 17:35:33,679: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:35:33,679: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:35:33,680: INFO: common: created directory at: artifacts]
+[2025-07-14 17:35:33,680: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-14 17:35:40,222: ERROR: main: 'DataTransformationComponent' object has no attribute 'tokenzier']
+Traceback (most recent call last):
+  File "D:\endToend\NLP\main.py", line 23, in <module>
+    data_validation_pipeline.initiate_data_transformation()
+  File "D:\endToend\NLP\src\text_summarier\pipeline\dataTransformation.py", line 15, in initiate_data_transformation
+    data_transformation.convert()
+  File "D:\endToend\NLP\src\text_summarier\components\dataTransformation.py", line 26, in convert
+    dataset_samsum_pt=dataset_samsum.map(self.convert_examples_to_features,batched=True)
+  File "D:\endToend\newEnv\lib\site-packages\datasets\dataset_dict.py", line 946, in map
+    dataset_dict[split] = dataset.map(
+  File "D:\endToend\newEnv\lib\site-packages\datasets\arrow_dataset.py", line 560, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "D:\endToend\newEnv\lib\site-packages\datasets\arrow_dataset.py", line 3318, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+  File "D:\endToend\newEnv\lib\site-packages\datasets\arrow_dataset.py", line 3674, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "D:\endToend\newEnv\lib\site-packages\datasets\arrow_dataset.py", line 3624, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+  File "D:\endToend\newEnv\lib\site-packages\datasets\arrow_dataset.py", line 3547, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "D:\endToend\NLP\src\text_summarier\components\dataTransformation.py", line 13, in convert_examples_to_features
+    input_encodings=self.tokenzier(example_batch['dialogue'],max_length=1024,truncation=True)
+AttributeError: 'DataTransformationComponent' object has no attribute 'tokenzier'
+[2025-07-14 17:36:25,526: INFO: config: TensorFlow version 2.10.1 available.]
+[2025-07-14 17:36:25,895: INFO: main: stage Data Ingestion Stage initiated]
+[2025-07-14 17:36:25,897: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:36:25,897: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:36:25,897: INFO: common: created directory at: artifacts]
+[2025-07-14 17:36:25,898: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-14 17:36:25,898: INFO: dataIngestion: File already exits]
+[2025-07-14 17:36:25,988: INFO: main: Stage Data Ingestion Stage Completed]
+[2025-07-14 17:36:25,989: INFO: main: stage Data Validation Stage initiated]
+[2025-07-14 17:36:25,990: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-14 17:36:25,990: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-14 17:36:25,991: INFO: common: created directory at: artifacts]
+[2025-07-14 17:36:25,991: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-14 17:36:29,842: INFO: main: Stage Data Validation Stage Completed]
